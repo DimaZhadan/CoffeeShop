@@ -322,6 +322,7 @@ body {
    justify-content: space-between;
    align-items: flex-start;
    z-index: 1;
+   padding-right: 75px;
 }
 
 .aboutus__section {}
@@ -357,15 +358,36 @@ body {
    z-index: 10;
 }
 
-.aboutus__title {}
+.aboutus__title {
+   font-weight: 700;
+   font-size: 38px;
+   line-height: 100%;
+   padding-bottom: 25px;
+}
 
-.aboutus__text {}
+.aboutus__text {
+   font-family: 'Alegreya Sans';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 19px;
+   line-height: 189%;
+   letter-spacing: 0.001em;
+   color: #444A4A;
+}
+
+.hiden-section{
+   display: none;
+}
 
 /*Responsive*/
 /*992px - 1200px*/
 @media screen and (max-width: 1200px) {
    .container {
       max-width: 960px;
+   }
+/*--------AboutUs-------------*/
+   .aboutus__section:nth-child(2) {
+      max-width: 445px;
    }
 }
 
@@ -549,6 +571,50 @@ body {
    .mainpage-btnarrow {
       display: flex;
       margin-left: 33px;
+   }
+   /*--------AboutUs-------------*/
+
+   .aboutus__sections {
+      flex-direction: column;
+      padding-right: 14px;
+      padding-left: 14px;
+   }
+   .aboutus__subtitle{
+      display: none;
+   }
+
+   .aboutus-wrapper{
+      display: flex;
+      justify-content: start;
+      background: #FAE9E0;
+      height: 241px;
+   }
+
+   .hiden-section{
+      display: block;
+      padding: 0 auto;
+   }
+
+   .aboutus-hidesec{
+      display: none;
+   }
+
+   .aboutus__img {
+      top: -21px;
+      left: 18px;
+   }
+
+   .aboutus__img img{
+      width: 339px;
+      height: 245px;
+   }
+
+   .aboutus__section:nth-child(1) {
+      position: relative;
+      width: 0;
+      height: 0;
+      background: none;
+      margin-bottom: 0;
    }
 }
 
