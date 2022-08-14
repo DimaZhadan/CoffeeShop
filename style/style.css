@@ -72,23 +72,31 @@ body {
    top: 0;
    left: 0;
    width: 100%;
-   z-index: 10;
-   background: #fff;
+   z-index: 90;
+   background: rgb(255, 255, 255);
    padding-top: 36px;
    padding-bottom: 36px;
-   min-height: 115px;
+   height: 115px;
 }
 
 .header__container {}
 
 .header__body {
-   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.menu__icon {
+   display: none;
+}
+
+.header__logo {
    display: flex;
    justify-content: space-between;
    align-items: center;
 }
-
-.header__logo {}
 
 .header__logo a span {
    font-family: 'Cedarville Cursive';
@@ -151,12 +159,149 @@ body {
    text-decoration: underline;
 }
 
-.main {
-   padding-top: 120px;
-}
+
 
 .header__social {
    display: none;
+}
+
+/*--------MainPage-------------*/
+.main {
+   margin-top: 120px;
+   z-index: 50;
+}
+
+.main-page {}
+
+.main__container {}
+
+.main__sections {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.main__section {}
+
+.main__text {
+   font-family: 'Cedarville Cursive';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 28px;
+   line-height: 189%;
+   color: #444A4A;
+   padding-bottom: 26px;
+}
+
+.main__title {
+   font-weight: 700;
+   font-size: 63px;
+   line-height: 63px;
+}
+
+.main__btn {
+   width: 235px;
+   height: 54px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   background: #2D635E;
+   border-radius: 5px;
+   font-family: 'George Round';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 25px;
+   color: #fff;
+   margin-top: 26px;
+}
+
+.main__btn:hover {
+   background: green;
+}
+
+.sub__section {
+   display: flex;
+   justify-content: flex-end;
+   align-items: flex-end;
+   padding-bottom: 100px;
+}
+
+.arrow__section {
+   background: #E3EBE7;
+   opacity: 0.4;
+   padding: 78px 67px 73px 67px;
+}
+
+.main__arrow {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+}
+
+.coffee-img {
+   position: relative;
+   width: 410px;
+   height: 466px;
+   background: #E3EBE7;
+   z-index: 10;
+}
+
+.coffee-img img {
+   display: block;
+   position: absolute;
+   top: 140px;
+   left: 39px;
+}
+
+.coffee-img span {
+   display: block;
+   position: absolute;
+   top: 329px;
+   left: 138px;
+   font-family: 'Cedarville Cursive';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 72px;
+   line-height: 137px;
+   color: #444A4A;
+}
+
+.main__social {
+   display: flex;
+   align-items: center;
+   width: 72px;
+   height: 20px;
+   flex-wrap: nowrap;
+   transform: translateY(-25px) rotate(-90deg);
+}
+
+.social__text {
+   display: flex;
+   width: 100px;
+   flex-wrap: nowrap;
+   font-weight: 700;
+   font-size: 28px;
+   line-height: 100%;
+   color: #444A4A;
+   white-space: nowrap;
+}
+
+.main__facebook {
+   transform: rotate(90deg);
+   margin-left: 28px;
+}
+
+.main__instagram {
+   transform: rotate(90deg);
+   margin-left: 14px;
+}
+
+.main__tweetter {
+   transform: rotate(90deg);
+   margin-left: 14px;
 }
 
 /*Responsive*/
@@ -176,6 +321,7 @@ body {
    .header__body {
       display: flex;
       justify-content: stretch;
+      margin: 0 auto;
    }
 
    .header__logo {
@@ -202,7 +348,7 @@ body {
    .menu__icon::after {
       left: 0px;
       position: absolute;
-      height: 10%;
+      height: 2px;
       width: 27px;
       transition: all 0.5s ease 0s;
       background-color: #000;
@@ -241,8 +387,8 @@ body {
    }
 
    .menu__icon._activete {
-      left: 90%;
-      right: 0;
+      left: 87%;
+      right: 30px;
       transition: all 0.5s ease 0s;
    }
 
@@ -271,8 +417,8 @@ body {
       margin-right: 0px;
    }
 
-   .header {
-      min-height: 100%;
+   .header._activete {
+      height: 100%;
    }
 
    .header-btn {
@@ -289,7 +435,7 @@ body {
       height: 100%;
       margin-top: 120px;
       overflow: auto;
-      z-index: 50;
+      z-index: 70;
       padding: 20px 10px 0px 15px;
       transition: left 0.5s ease 0s;
    }
