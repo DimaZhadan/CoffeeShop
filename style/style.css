@@ -42,6 +42,10 @@ body {
    font-weight: 700;
 }
 
+body._lock{
+   overflow: hidden;
+}
+
 @font-face {
    font-style: normal;
    font-weight: 400;
