@@ -363,7 +363,7 @@ body {
    font-weight: 700;
    font-size: 38px;
    line-height: 100%;
-   padding-bottom: 25px;
+   padding-bottom: 19px;
 }
 
 .aboutus__text {
@@ -388,7 +388,6 @@ body {
 .promotion__container {}
 
 .promotion__sections {
-
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -527,6 +526,34 @@ body {
    margin: 43px 52px 47px 52px;
 }
 
+.shop__btn{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 235px;
+   height: 54px;
+   background: #2D635E;
+   border-radius: 5px;
+   font-family: 'George Round';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 20px;
+   line-height: calc(25/20)*100%;
+   color: #FFFFFF;
+   margin-top: 24px;
+   margin: 43px auto 47px;
+}
+
+.shop__btn:hover{
+   background: green;
+   transition: 500ms;
+}
+.pc-shop-btn{
+   display: flex;
+}
+.mob-shop-btn{
+   display: none;
+}
 /*------footer-------*/
 
 .footer {}
@@ -807,7 +834,7 @@ body {
    }
 
    .main__text {
-      margin-top: 150px;
+      margin-top: 114px;
       font-size: 19px;
       text-align: center;
    }
@@ -877,6 +904,7 @@ body {
    }
 
    .aboutus__title {
+      width: 342px;
       font-weight: 400;
       font-size: 38px;
       line-height: 38px;
@@ -1030,5 +1058,44 @@ body {
 @media screen and (max-width: 576px) {
    .container {
       max-width: 100%;
+   }
+
+   .aboutus__text{
+      margin-bottom: 16px;
+   }
+
+   .promotion__sections {
+      padding-top: 39px;
+      padding-bottom: 64px;
+   }
+   .promotion__title{
+      margin-bottom: 30px;
+   }
+   .promotion__text{
+      margin-bottom: 32px;
+   }
+   .promotion__btn{
+      display: none;
+   }
+   .shop {
+      background: #fff;
+   }
+   .shop__title{
+      padding: 45px 0px 32px;
+   }
+
+   .shop__btn{
+      width: 209px;
+      height: 54px;
+      margin: 43px auto 47px;
+   }
+   .footer__container{
+      padding-top: 48px;
+   }
+   .pc-shop-btn{
+      display: none;
+   }
+   .mob-shop-btn{
+      display: flex;
    }
 }
