@@ -22,13 +22,13 @@ if (menuLinks.length > 0) {
       const menuLink = e.target;
       if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
          const goToBlock = document.querySelector(menuLink.dataset.goto);
-         const gotoBlockValue = goToBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
+         const gotoBlockValue = goToBlock.getBoundingClientRect().top + scrollY - document.querySelector('.header').offsetHeight;
 
-         if(iconMenu.classList.contains('_activete')){
+         if (iconMenu.classList.contains('_activete')) {
             document.body.classList.remove('_lock')
             iconMenu.classList.remove('_activete');
             menuList.classList.remove('_activete');
-            header.classList.toggle('_activete');
+            header.classList.remove('_activete');
          }
 
          window.scrollTo({
@@ -95,3 +95,23 @@ if (menuLinks.length > 0) {
 // })
 
 // window.setInterval(nextslide, 9000);
+
+//Contact Modal
+
+const footerBtn = document.querySelector('.footer__btn');
+const sectionWrapper = document.querySelector('.section__wrapper');
+const footerArrow = document.querySelector('.footer__arrow');
+footerBtn.addEventListener('click', () => {
+
+   footerArrow.classList.toggle('rotate');
+
+
+   if (sectionWrapper.clientHeight === 150) {
+      sectionWrapper.style.height = "251px";
+   } else {
+      sectionWrapper.style.height = "150px";
+   }
+   window.scrollbars({
+      behavior: "smooth"
+   })
+})

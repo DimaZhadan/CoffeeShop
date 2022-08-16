@@ -42,7 +42,7 @@ body {
    font-weight: 700;
 }
 
-body._lock{
+body._lock {
    overflow: hidden;
 }
 
@@ -530,7 +530,7 @@ body._lock{
    margin: 43px 52px 47px 52px;
 }
 
-.shop__btn{
+.shop__btn {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -548,16 +548,19 @@ body._lock{
    margin: 43px auto 47px;
 }
 
-.shop__btn:hover{
+.shop__btn:hover {
    background: green;
    transition: 500ms;
 }
-.pc-shop-btn{
+
+.pc-shop-btn {
    display: flex;
 }
-.mob-shop-btn{
+
+.mob-shop-btn {
    display: none;
 }
+
 /*------footer-------*/
 
 .footer {}
@@ -645,6 +648,7 @@ body._lock{
 .footer__btn {
    display: none;
 }
+
 
 /*Responsive*/
 /*992px - 1200px*/
@@ -987,7 +991,7 @@ body._lock{
       left: 57px;
    }
 
-   .promotion__btn{
+   .promotion__btn {
       margin: 0 auto;
    }
 
@@ -1040,7 +1044,7 @@ body._lock{
       margin: 10px auto 0px;
    }
 
-   .footer__btn img{
+   .footer__btn img {
       display: flex;
       margin-left: 6px;
    }
@@ -1049,11 +1053,11 @@ body._lock{
       margin-bottom: 10px;
    }
 
-   .adress__text{
+   .adress__text {
       text-align: center;
    }
 
-   .modify{
+   .modify {
       display: none;
    }
 }
@@ -1064,7 +1068,7 @@ body._lock{
       max-width: 100%;
    }
 
-   .aboutus__text{
+   .aboutus__text {
       margin-bottom: 16px;
    }
 
@@ -1072,34 +1076,60 @@ body._lock{
       padding-top: 39px;
       padding-bottom: 64px;
    }
-   .promotion__title{
+
+   .promotion__title {
       margin-bottom: 30px;
    }
-   .promotion__text{
+
+   .promotion__text {
       margin-bottom: 32px;
    }
-   .promotion__btn{
+
+   .promotion__btn {
       display: none;
    }
+
    .shop {
       background: #fff;
    }
-   .shop__title{
+
+   .shop__title {
       padding: 45px 0px 32px;
    }
 
-   .shop__btn{
+   .shop__btn {
       width: 209px;
       height: 54px;
       margin: 43px auto 47px;
    }
-   .footer__container{
+
+   .footer__container {
       padding-top: 48px;
    }
-   .pc-shop-btn{
+
+   .pc-shop-btn {
       display: none;
    }
-   .mob-shop-btn{
+
+   .mob-shop-btn {
       display: flex;
+   }
+
+   .section__wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      height: 150px;
+      overflow: hidden;
+      transition: all 0.5s ease 0s;
+   }
+
+   .footer__arrow{
+      transition: all 0.5s ease 0s;
+   }
+   
+   .rotate {
+      transform: rotate(-90deg);
+      transition: all 0.5s ease 0s;
    }
 }
