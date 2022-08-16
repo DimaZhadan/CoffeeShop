@@ -178,7 +178,7 @@ body._lock {
 .main-page {}
 
 .main__container {
-   padding-bottom: 90px;
+   padding-bottom: 70px;
 }
 
 .main__sections {
@@ -224,6 +224,7 @@ body._lock {
 }
 
 .main__btn:hover {
+   cursor: pointer;
    background: green;
    transition: 500ms;
 }
@@ -318,9 +319,9 @@ body._lock {
 /*--------AboutUs-------------*/
 .aboutus {}
 
-.aboutus__container {}
-
-.container {}
+.aboutus__container {
+   padding-top: 20px;
+}
 
 .aboutus__sections {
    display: flex;

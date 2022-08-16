@@ -11,6 +11,14 @@ if (iconMenu) {
    })
 }
 
+//shopingButton
+const orderBtn = document.querySelector('.main__btn');
+const shopSection = document.querySelector('.page__shop');
+orderBtn.addEventListener('click', () => {
+   shopSection.scrollIntoView({ block: "center", behavior: "smooth" });
+
+})
+
 //scrolling
 
 const menuLinks = document.querySelectorAll('.link-header[data-goto]');
@@ -22,7 +30,7 @@ if (menuLinks.length > 0) {
       const menuLink = e.target;
       if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
          const goToBlock = document.querySelector(menuLink.dataset.goto);
-         const gotoBlockValue = goToBlock.getBoundingClientRect().top + scrollY - document.querySelector('.header').offsetHeight;
+         const gotoBlockValue = goToBlock.getBoundingClientRect().top + scrollY - document.querySelector('.header__body').offsetHeight;
 
          if (iconMenu.classList.contains('_activete')) {
             document.body.classList.remove('_lock')
@@ -40,63 +48,7 @@ if (menuLinks.length > 0) {
    }
 }
 
-//slider
-
-// const slides = document.querySelectorAll('.slide'),
-//    dots = document.querySelectorAll('.dot');
-
-// let index = 0;
-
-// const activeSlide = n => {
-//    for (slide of slides) {
-//       slide.classList.remove('active');
-//    }
-//    slides[n].classList.add('active');
-// }
-
-// const activeDot = n => {
-//    for (dot of dots) {
-//       dot.classList.remove('active');
-//    }
-//    dots[n].classList.add('active');
-// }
-
-// const prepareCurrentSlide = ind => {
-//    activeSlide(index);
-//    activeDot(index);
-// }
-
-// const nextslide = () => {
-//    if (index == slides.length - 1) {
-//       index = 0;
-//       prepareCurrentSlide(index);
-//    } else {
-//       index++;
-//       prepareCurrentSlide(index);
-//    }
-// }
-
-// const prevslide = () => {
-//    if (index == 0) {
-//       index = slides.length - 1;
-//       prepareCurrentSlide(index);
-//    } else {
-//       index--;
-//       prepareCurrentSlide(index);
-//    }
-
-// }
-
-// dots.forEach((item, indexDot) => {
-//    item.addEventListener('click', () => {
-//       index = indexDot;
-//       prepareCurrentSlide(index);
-//    })
-// })
-
-// window.setInterval(nextslide, 9000);
-
-//Contact Modal
+//Contact window
 
 const footerBtn = document.querySelector('.footer__btn');
 const sectionWrapper = document.querySelector('.section__wrapper');
@@ -112,3 +64,6 @@ footerBtn.addEventListener('click', () => {
       sectionWrapper.style.height = "150px";
    }
 })
+
+
+
