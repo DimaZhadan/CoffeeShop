@@ -111,7 +111,4 @@ footerBtn.addEventListener('click', () => {
    } else {
       sectionWrapper.style.height = "150px";
    }
-   window.scrollbars({
-      behavior: "smooth"
-   })
 })
